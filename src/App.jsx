@@ -10,19 +10,18 @@ import Player from "./pages/Player";
 import ChoosePlan from "./pages/ChoosePlan";
 import PaymentMethod from "./pages/PaymentMethod";
 import Settings from "./pages/Settings";
-
 import Sidebar from "./components/Sidebar";
+import Search from "./pages/Search";
+import Help from "./pages/Help";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public Pages */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* Main App Pages */}
         <Route
           path="/for-you"
           element={
@@ -43,6 +42,11 @@ function App() {
           }
         />
 
+        <Route path="/book/:id" element={<BookDetails />} />
+        <Route path="/player/:id" element={<Player />} />
+        <Route path="/choose-plan" element={<ChoosePlan />} />
+        <Route path="/payment" element={<PaymentMethod />} />
+
         <Route
           path="/settings"
           element={
@@ -52,16 +56,6 @@ function App() {
             </>
           }
         />
-
-        {/* Book Pages */}
-        <Route path="/book/:id" element={<BookDetails />} />
-        <Route path="/player/:id" element={<Player />} />
-
-        {/* Subscription */}
-        <Route path="/choose-plan" element={<ChoosePlan />} />
-
-        {/* Payment */}
-        <Route path="/payment" element={<PaymentMethod />} />
       </Routes>
     </BrowserRouter>
   );

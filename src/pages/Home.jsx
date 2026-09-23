@@ -9,6 +9,7 @@ import {
 import logo from "../assets/logo.png";
 import landingImage from "../assets/landing.png";
 
+
 const Home = () => {
   return (
     <main className="summarist-home">
@@ -369,7 +370,7 @@ const Home = () => {
           <Link to="/choose-plan">Pricing</Link>
           <a href="#business">Summarist Business</a>
           <a href="#gifts">Gift Cards</a>
-          <a href="#authors">Authors &amp; Publishers</a>
+          <a href="#authors">Authors Publishers</a>
         </div>
 
         <div>

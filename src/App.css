@@ -45,7 +45,6 @@ img {
   min-height: 100vh;
 }
 
-
 /* =========================================================
    HOME PAGE
 ========================================================= */
@@ -56,7 +55,6 @@ img {
   overflow-x: hidden;
   background: #ffffff;
 }
-
 
 /* =========================================================
    NAVBAR
@@ -103,7 +101,6 @@ img {
 .summarist-nav-links a:hover {
   color: #20ba68;
 }
-
 
 /* =========================================================
    HOME HERO
@@ -175,7 +172,6 @@ img {
   display: block;
 }
 
-
 /* =========================================================
    HOME SECTION TITLES
 ========================================================= */
@@ -191,7 +187,6 @@ img {
   line-height: 1.2;
   font-weight: 800;
 }
-
 
 /* =========================================================
    FEATURES
@@ -243,7 +238,6 @@ img {
   line-height: 1.6;
 }
 
-
 /* =========================================================
    HOME BENEFITS
 ========================================================= */
@@ -279,7 +273,6 @@ img {
   font-size: 21px;
   line-height: 1.4;
 }
-
 
 /* =========================================================
    HOME STATISTICS
@@ -319,7 +312,6 @@ img {
   color: #173348;
 }
 
-
 /* =========================================================
    HOME GOALS
 ========================================================= */
@@ -349,7 +341,6 @@ img {
   font-size: 19px;
   line-height: 1.4;
 }
-
 
 /* =========================================================
    TESTIMONIALS
@@ -404,7 +395,6 @@ img {
   color: #032b41;
 }
 
-
 /* =========================================================
    CTA
 ========================================================= */
@@ -424,7 +414,6 @@ img {
   line-height: 1.25;
   font-weight: 800;
 }
-
 
 /* =========================================================
    PLATFORM STATS
@@ -463,7 +452,6 @@ img {
   font-size: 15px;
   line-height: 1.5;
 }
-
 
 /* =========================================================
    FOOTER
@@ -513,7 +501,6 @@ img {
 .summarist-footer a:hover {
   color: #20ba68;
 }
-
 
 /* =========================================================
    AUTH PAGES
@@ -616,7 +603,6 @@ img {
   text-align: center;
 }
 
-
 /* =========================================================
    APP LAYOUT
 ========================================================= */
@@ -626,7 +612,6 @@ img {
   display: flex;
   background: #f1f6f8;
 }
-
 
 /* =========================================================
    SIDEBAR
@@ -711,7 +696,6 @@ img {
   text-align: left;
 }
 
-
 /* =========================================================
    FOR YOU PAGE
 ========================================================= */
@@ -746,7 +730,6 @@ img {
   font-size: 16px;
   line-height: 1.5;
 }
-
 
 /* =========================================================
    SELECTED BOOK
@@ -842,7 +825,6 @@ img {
   font-weight: 700;
 }
 
-
 /* =========================================================
    BOOK SECTIONS
 ========================================================= */
@@ -865,7 +847,6 @@ img {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 20px;
 }
-
 
 /* =========================================================
    BOOK CARDS
@@ -938,7 +919,6 @@ img {
   font-weight: 700;
 }
 
-
 /* =========================================================
    PREMIUM
 ========================================================= */
@@ -954,7 +934,6 @@ img {
   font-size: 10px;
   font-weight: 700;
 }
-
 
 /* =========================================================
    ERROR
@@ -995,7 +974,6 @@ img {
   color: #ffffff;
   font-weight: 700;
 }
-
 
 /* =========================================================
    SKELETONS
@@ -1094,7 +1072,6 @@ img {
     opacity: 0.55;
   }
 }
-
 
 /* =========================================================
    BOOK DETAILS
@@ -1253,7 +1230,6 @@ img {
   font-size: 14px;
 }
 
-
 /* =========================================================
    BOOK DETAILS SKELETON
 ========================================================= */
@@ -1277,7 +1253,6 @@ img {
 .book-details-skeleton-content {
   padding-top: 20px;
 }
-
 
 /* =========================================================
    PLAYER
@@ -1386,7 +1361,6 @@ img {
   font-size: 26px;
 }
 
-
 /* =========================================================
    PLAYER SKELETON
 ========================================================= */
@@ -1425,7 +1399,6 @@ img {
   background: #e6edef;
   animation: skeletonPulse 1.4s infinite ease-in-out;
 }
-
 
 /* =========================================================
    CHOOSE PLAN
@@ -1626,7 +1599,6 @@ img {
   text-align: center;
 }
 
-
 /* =========================================================
    LOGIN MODAL
 ========================================================= */
@@ -1811,7 +1783,6 @@ img {
   text-align: center;
 }
 
-
 /* =========================================================
    TABLET
 ========================================================= */
@@ -1842,7 +1813,6 @@ img {
     height: 260px;
   }
 }
-
 
 /* =========================================================
    TABLET / SMALL DESKTOP
@@ -1881,7 +1851,6 @@ img {
   }
 }
 
-
 /* =========================================================
    MOBILE
 ========================================================= */
@@ -1906,7 +1875,6 @@ img {
   .summarist-nav-links a {
     font-size: 12px;
   }
-
 
   /* HOME HERO */
 
@@ -1939,7 +1907,6 @@ img {
     width: 90%;
   }
 
-
   /* FEATURES */
 
   .summarist-features {
@@ -1959,7 +1926,6 @@ img {
     gap: 45px;
   }
 
-
   /* BENEFITS */
 
   .summarist-benefits {
@@ -1969,7 +1935,6 @@ img {
   .summarist-benefits-grid {
     grid-template-columns: 1fr;
   }
-
 
   /* STATS */
 
@@ -1992,14 +1957,12 @@ img {
     font-size: 15px;
   }
 
-
   /* GOALS */
 
   .summarist-goals {
     padding: 55px 20px;
     grid-template-columns: 1fr;
   }
-
 
   /* TESTIMONIALS */
 
@@ -2015,7 +1978,6 @@ img {
     padding: 25px;
   }
 
-
   /* CTA */
 
   .summarist-cta {
@@ -2026,7 +1988,6 @@ img {
     font-size: 29px;
   }
 
-
   /* PLATFORM */
 
   .summarist-platform-stats {
@@ -2034,7 +1995,6 @@ img {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-
 
   /* FOOTER */
 
@@ -2047,7 +2007,6 @@ img {
   .summarist-footer-brand {
     grid-column: 1 / -1;
   }
-
 
   /* AUTH */
 
@@ -2062,7 +2021,6 @@ img {
   .auth-card h1 {
     font-size: 28px;
   }
-
 
   /* SIDEBAR */
 
@@ -2098,7 +2056,6 @@ img {
   .for-you-header p {
     font-size: 14px;
   }
-
 
   /* FOR YOU BOOKS */
 
@@ -2150,7 +2107,6 @@ img {
     font-size: 25px;
   }
 
-
   /* BOOK DETAILS */
 
   .book-details-page {
@@ -2171,7 +2127,6 @@ img {
     grid-template-columns: 1fr;
     padding: 25px;
   }
-
 
   /* PLAYER */
 
@@ -2195,7 +2150,6 @@ img {
     gap: 18px;
   }
 
-
   /* CHOOSE PLAN */
 
   .choose-plan-page {
@@ -2218,7 +2172,6 @@ img {
     padding: 25px;
   }
 
-
   /* LOGIN */
 
   .login-overlay {
@@ -2238,7 +2191,6 @@ img {
     margin-left: -25px;
   }
 }
-
 
 /* =========================================================
    SMALL MOBILE
@@ -2267,7 +2219,6 @@ img {
     display: none;
   }
 
-
   /* HERO */
 
   .summarist-hero {
@@ -2288,13 +2239,11 @@ img {
     font-size: 16px;
   }
 
-
   /* HOME */
 
   .summarist-section-title h2 {
     font-size: 27px;
   }
-
 
   /* SIDEBAR */
 
@@ -2333,7 +2282,6 @@ img {
     font-size: 12px;
   }
 
-
   /* FOR YOU */
 
   .books-grid {
@@ -2357,14 +2305,12 @@ img {
     height: 220px;
   }
 
-
   /* PLAYER */
 
   .audio-progress {
     grid-template-columns: 40px 1fr 40px;
     gap: 8px;
   }
-
 
   /* FOOTER */
 
@@ -2537,7 +2483,6 @@ img {
   color: #032b41;
 }
 
-
 /* =========================================================
    SIDEBAR
 ========================================================= */
@@ -2560,7 +2505,6 @@ img {
 
   z-index: 1000;
 }
-
 
 /* =========================================================
    SIDEBAR LOGO
@@ -2589,7 +2533,6 @@ img {
   transform: rotate(-12deg);
 }
 
-
 /* =========================================================
    SIDEBAR NAVIGATION
 ========================================================= */
@@ -2600,13 +2543,11 @@ img {
   flex-direction: column;
 }
 
-
 /* Main navigation */
 
 .sidebar-main-nav {
   margin-top: 25px;
 }
-
 
 /* Bottom navigation */
 
@@ -2614,7 +2555,6 @@ img {
   margin-top: auto;
   padding-bottom: 18px;
 }
-
 
 /* Navigation buttons */
 
@@ -2651,7 +2591,6 @@ img {
     color 0.2s ease;
 }
 
-
 .summarist-sidebar button svg {
   width: 25px;
   min-width: 25px;
@@ -2659,11 +2598,9 @@ img {
   font-size: 23px;
 }
 
-
 .summarist-sidebar button:hover {
   background: #e9f2ef;
 }
-
 
 /* =========================================================
    ACTIVE SETTINGS
@@ -2673,7 +2610,6 @@ img {
   background: #eef6f4;
   color: #032b41;
 }
-
 
 .summarist-sidebar button.sidebar-active::before {
   content: "";
@@ -2688,7 +2624,6 @@ img {
 
   background: #20d47a;
 }
-
 
 /* =========================================================
    SETTINGS MAIN CONTENT
@@ -2706,7 +2641,6 @@ img {
   padding-top: 100px;
 }
 
-
 /* =========================================================
    SETTINGS CONTAINER
 ========================================================= */
@@ -2721,7 +2655,6 @@ img {
   padding: 0 35px 100px;
 }
 
-
 /* =========================================================
    SETTINGS TITLE
 ========================================================= */
@@ -2731,7 +2664,6 @@ img {
 
   border-bottom: 1px solid #dce5e9;
 }
-
 
 .settings-title h1 {
   margin: 0;
@@ -2745,7 +2677,6 @@ img {
   font-weight: 800;
 }
 
-
 /* =========================================================
    SETTINGS SECTION
 ========================================================= */
@@ -2755,7 +2686,6 @@ img {
 
   border-bottom: 1px solid #dce5e9;
 }
-
 
 .settings-section h2 {
   margin: 0 0 12px;
@@ -2769,7 +2699,6 @@ img {
   font-weight: 700;
 }
 
-
 .settings-value {
   margin: 0 0 17px;
 
@@ -2779,7 +2708,6 @@ img {
 
   line-height: 1.5;
 }
-
 
 /* =========================================================
    UPGRADE BUTTON
@@ -2812,21 +2740,17 @@ img {
     box-shadow 0.2s ease;
 }
 
-
 .upgrade-button:hover {
   background: #19c66d;
 
   transform: translateY(-1px);
 
-  box-shadow:
-    0 6px 15px rgba(32, 212, 122, 0.2);
+  box-shadow: 0 6px 15px rgba(32, 212, 122, 0.2);
 }
-
 
 .upgrade-button:active {
   transform: translateY(0);
 }
-
 
 /* =========================================================
    EMAIL SECTION
@@ -2838,7 +2762,6 @@ img {
   border-bottom: none;
 }
 
-
 .settings-email {
   margin: 0;
 
@@ -2849,13 +2772,11 @@ img {
   line-height: 1.5;
 }
 
-
 /* =========================================================
    TABLET
 ========================================================= */
 
 @media (max-width: 900px) {
-
   .summarist-sidebar {
     width: 220px;
     min-width: 220px;
@@ -2882,16 +2803,13 @@ img {
   .settings-container {
     padding: 0 30px 80px;
   }
-
 }
-
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
 @media (max-width: 700px) {
-
   .summarist-sidebar {
     width: 75px;
     min-width: 75px;
@@ -2957,16 +2875,13 @@ img {
   .upgrade-button {
     width: 100%;
   }
-
 }
-
 
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 450px) {
-
   .summarist-sidebar {
     width: 65px;
     min-width: 65px;
@@ -2985,7 +2900,6 @@ img {
   .settings-title h1 {
     font-size: 30px;
   }
-
 }
 /* =========================
    Library Page
@@ -3063,23 +2977,60 @@ img {
 }
 
 .payment-card h1 {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   color: #032b41;
   font-size: 32px;
   font-weight: 800;
 }
 
-.payment-plan {
-  margin: 0 0 8px;
+.payment-subtitle {
+  margin: 0 0 30px;
   color: #6b7c85;
   font-size: 16px;
 }
 
-.payment-price {
-  margin: 0 0 30px;
+.payment-summary {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 8px;
+  background: #f4f8f7;
+}
+
+.payment-summary div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.payment-summary span {
+  color: #6b7c85;
+  font-size: 14px;
+}
+
+.payment-summary strong {
   color: #032b41;
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 18px;
+}
+
+.payment-summary small {
+  color: #6b7c85;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.payment-divider {
+  width: 100%;
+  height: 1px;
+  margin: 30px 0;
+  background: #dce5e9;
+}
+
+.payment-card h2 {
+  margin: 0 0 20px;
+  color: #032b41;
+  font-size: 22px;
 }
 
 .payment-form {
@@ -3141,8 +3092,15 @@ img {
   opacity: 0.9;
 }
 
+.payment-secure {
+  margin: 20px 0 0;
+  color: #032b41;
+  font-size: 14px;
+  text-align: center;
+}
+
 .payment-demo-note {
-  margin: 22px 0 0;
+  margin: 10px 0 0;
   color: #7a8a92;
   font-size: 13px;
   line-height: 1.5;
@@ -3160,6 +3118,10 @@ img {
 
   .payment-row {
     grid-template-columns: 1fr;
+  }
+
+  .payment-summary {
+    flex-direction: column;
   }
 }
 /* =========================
@@ -3230,4 +3192,605 @@ img {
   margin: 0;
   color: #6b7c85;
   font-size: 16px;
+}
+
+/* =========================
+   Home - Knowledge & Statistics
+========================= */
+
+.summarist-knowledge {
+  width: 100%;
+  padding: 90px 20px;
+  background: #f7fafb;
+}
+
+.knowledge-row {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.knowledge-row-reverse {
+  margin-bottom: 0;
+}
+
+.summarist-goal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.summarist-goal {
+  padding: 18px 22px;
+  border-radius: 8px;
+  color: #032b41;
+  background: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(3, 43, 65, 0.06);
+}
+
+.summarist-goal.active {
+  background: #032b41;
+  color: #ffffff;
+}
+
+.summarist-statistics-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.summarist-statistic {
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(3, 43, 65, 0.08);
+}
+
+.summarist-statistic strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #20d47a;
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.summarist-statistic p {
+  margin: 0;
+  color: #032b41;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.summarist-statistic b {
+  font-weight: 800;
+}
+
+/* =========================
+   Home - Testimonials
+========================= */
+
+.summarist-testimonials {
+  width: 100%;
+  padding: 90px 20px;
+  background: #ffffff;
+}
+
+.summarist-testimonial-grid {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.summarist-testimonial {
+  padding: 30px;
+  border: 1px solid #dce5e9;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.summarist-testimonial h3 {
+  margin: 0 0 12px;
+  color: #032b41;
+  font-size: 20px;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+  color: #20d47a;
+}
+
+.summarist-testimonial p {
+  margin: 0;
+  color: #526873;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* =========================
+   Home - CTA
+========================= */
+
+.summarist-cta {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f1f6f8;
+}
+
+.summarist-cta h2 {
+  margin-top: 25px;
+  color: #032b41;
+  font-size: 32px;
+}
+
+/* =========================
+   Home - Platform Statistics
+========================= */
+
+.summarist-platform-stats {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.summarist-platform-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summarist-platform-stats strong {
+  color: #032b41;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.summarist-platform-stats span {
+  color: #6b7c85;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* =========================
+   Home - Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .knowledge-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .summarist-testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summarist-platform-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .summarist-statistic strong {
+    font-size: 36px;
+  }
+}
+/* =========================
+   Home - Navbar
+========================= */
+
+.summarist-home {
+  width: 100%;
+  min-height: 100vh;
+  color: #032b41;
+  background: #ffffff;
+}
+
+.summarist-navbar {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summarist-logo img {
+  width: 150px;
+  display: block;
+}
+
+.summarist-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.summarist-nav-links a {
+  color: #032b41;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.summarist-nav-links a:hover {
+  color: #20d47a;
+}
+
+/* =========================
+   Home - Hero
+========================= */
+
+.summarist-hero {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.summarist-hero-content h1 {
+  margin: 0 0 20px;
+  color: #032b41;
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.summarist-hero-content p {
+  max-width: 520px;
+  margin: 0 0 30px;
+  color: #526873;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.summarist-primary-button {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 6px;
+  background: #20d47a;
+  color: #032b41;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.summarist-primary-button:hover {
+  opacity: 0.9;
+}
+
+.summarist-hero-image img {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* =========================
+   Home - Features
+========================= */
+
+.summarist-features {
+  width: 100%;
+  padding: 90px 20px;
+  background: #f7fafb;
+}
+
+.summarist-section-title {
+  text-align: center;
+}
+
+.summarist-section-title h2 {
+  margin: 0;
+  color: #032b41;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.summarist-feature-grid {
+  width: 100%;
+  max-width: 1100px;
+  margin: 50px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.summarist-feature {
+  padding: 35px 25px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(3, 43, 65, 0.07);
+}
+
+.summarist-feature-icon {
+  margin-bottom: 20px;
+  color: #20d47a;
+  font-size: 35px;
+}
+
+.summarist-feature h3 {
+  margin: 0 0 12px;
+  color: #032b41;
+  font-size: 21px;
+}
+
+.summarist-feature p {
+  margin: 0;
+  color: #6b7c85;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* =========================
+   Home - Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .summarist-navbar {
+    padding: 18px 20px;
+  }
+
+  .summarist-nav-links {
+    gap: 14px;
+  }
+
+  .summarist-hero {
+    grid-template-columns: 1fr;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .summarist-hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .summarist-hero-content h1 {
+    font-size: 40px;
+  }
+
+  .summarist-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   Register Page - Blue Style
+========================= */
+
+.google-login-button {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #d7e1e7;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #032b41;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.google-login-button:hover {
+  background: #f4f8fa;
+}
+
+.google-login-button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 18px 0;
+  color: #6b7c85;
+  font-size: 14px;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #dce5e9;
+}
+
+.login-submit-button {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 6px;
+  background: #032b41;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.login-submit-button:hover {
+  background: #064b6b;
+}
+
+.login-submit-button:disabled,
+.google-login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-register-section a {
+  color: #032b41;
+  font-weight: 700;
+}
+
+.login-register-section a:hover {
+  color: #20d47a;
+}
+/* =========================
+   Search Page
+========================= */
+
+.search-page {
+  min-height: 100vh;
+  margin-left: 250px;
+  padding: 50px 40px;
+  background: #f7fafb;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.search-container h1 {
+  margin: 0 0 25px;
+  color: #032b41;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.search-input-wrapper {
+  width: 100%;
+  max-width: 700px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 18px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #dce5e9;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(3, 43, 65, 0.06);
+}
+
+.search-input-wrapper svg {
+  color: #6b7c85;
+  flex-shrink: 0;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: #032b41;
+  background: transparent;
+  font-size: 16px;
+}
+
+.search-input-wrapper input::placeholder {
+  color: #8a9aa2;
+}
+
+.search-status {
+  margin-top: 30px;
+  color: #6b7c85;
+  font-size: 16px;
+}
+
+.search-error {
+  margin-top: 30px;
+  color: #c0392b;
+  font-size: 16px;
+}
+
+.search-results {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.search-book-card {
+  min-width: 0;
+  padding: 0;
+  border: none;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 3px 15px rgba(3, 43, 65, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 7px 20px rgba(3, 43, 65, 0.12);
+}
+
+.search-book-card img {
+  width: 100%;
+  height: 230px;
+  display: block;
+  object-fit: cover;
+}
+
+.search-book-card > div {
+  padding: 18px;
+}
+
+.search-book-card h2 {
+  margin: 0 0 8px;
+  color: #032b41;
+  font-size: 17px;
+  line-height: 1.3;
+}
+
+.search-book-card p {
+  margin: 0;
+  color: #6b7c85;
+  font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+  .search-results {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .search-page {
+    margin-left: 0;
+    padding: 35px 20px;
+  }
+
+  .search-results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .search-results {
+    grid-template-columns: 1fr;
+  }
 }

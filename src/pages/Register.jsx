@@ -1,29 +1,55 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
-import { signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 
-import googleIcon from "../assets/google.png";
-import { auth, googleProvider } from "../firebase";
+import { auth } from "../firebase";
+import googleLogo from "../assets/google.png";
 
 const Register = () => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // =========================
-  // EMAIL SIGN UP
-  // =========================
+  const clearError = () => {
+    if (error) {
+      setError("");
+    }
+  };
+
+  const saveUserAndContinue = (user) => {
+    localStorage.setItem(
+      "user",
+      JSON.stringify({
+        name: user.displayName || "",
+        email: user.email || "",
+        photo: user.photoURL || "",
+      })
+    );
+
+    navigate("/for-you");
+  };
+
   const handleRegister = async (event) => {
     event.preventDefault();
 
     setError("");
 
-    if (!email || !password) {
-      setError("Please enter your email and password.");
+    if (!email || !password || !confirmPassword) {
+      setError("Please fill in all fields.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
       return;
     }
 
@@ -32,156 +58,149 @@ const Register = () => {
       return;
     }
 
-    try {
-      setLoading(true);
+    setLoading(true);
 
+    try {
       const result = await createUserWithEmailAndPassword(
         auth,
-        email,
+        email.trim(),
         password
       );
 
-      const user = result.user;
-
-      localStorage.setItem(
-        "user",
-        JSON.stringify({
-          name: user.displayName || "",
-          email: user.email,
-          photo: user.photoURL || "",
-        })
-      );
-
-      navigate("/for-you");
+      saveUserAndContinue(result.user);
     } catch (error) {
-      console.error("Registration error:", error);
+      console.error("Firebase registration error:", error);
 
       switch (error.code) {
-        case "auth/invalid-email":
-          setError("Please enter a valid email address.");
+        case "auth/email-already-in-use":
+          setError("This email is already registered. Please log in.");
           break;
 
-        case "auth/email-already-in-use":
-          setError("This email is already registered.");
+        case "auth/invalid-email":
+          setError("Please enter a valid email address.");
           break;
 
         case "auth/weak-password":
           setError("Password must be at least 6 characters.");
           break;
 
+        case "auth/operation-not-allowed":
+          setError(
+            "Email/password registration is not enabled in Firebase."
+          );
+          break;
+
+        case "auth/network-request-failed":
+          setError(
+            "Network error. Please check your internet connection."
+          );
+          break;
+
         default:
-          setError("Registration failed. Please try again.");
+          setError(
+            `Registration failed: ${
+              error.message || "Please try again."
+            }`
+          );
       }
     } finally {
       setLoading(false);
     }
   };
 
-  // =========================
-  // GOOGLE SIGN UP
-  // =========================
-  const handleGoogleSignup = async () => {
+  const handleGoogleSignUp = async () => {
     setError("");
+    setLoading(true);
 
     try {
-      const result = await signInWithPopup(
-        auth,
-        googleProvider
-      );
+      const provider = new GoogleAuthProvider();
 
-      const user = result.user;
+      const result = await signInWithPopup(auth, provider);
 
-      localStorage.setItem(
-        "user",
-        JSON.stringify({
-          name: user.displayName || "",
-          email: user.email || "",
-          photo: user.photoURL || "",
-        })
-      );
-
-      navigate("/for-you");
+      saveUserAndContinue(result.user);
     } catch (error) {
-      console.error("Google signup error:", error);
-      setError(
-        error.message || "Google signup failed. Please try again."
-      );
-    }
-  };
+      console.error("Google registration error:", error);
 
-  // =========================
-  // CLOSE
-  // =========================
-  const handleClose = () => {
-    navigate("/");
+      if (error.code === "auth/popup-closed-by-user") {
+        setError("Google sign up was cancelled.");
+      } else if (error.code === "auth/popup-blocked") {
+        setError("Please allow pop-ups and try again.");
+      } else {
+        setError(
+          `Google sign up failed: ${
+            error.message || "Please try again."
+          }`
+        );
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <main className="login-overlay">
       <div className="login-modal">
-
-        {/* Close Button */}
         <button
           type="button"
           className="login-close"
-          onClick={handleClose}
-          aria-label="Close signup"
+          onClick={() => navigate("/")}
+          aria-label="Close registration"
         >
           <FaTimes />
         </button>
 
-        {/* Title */}
-        <h1>Sign up to Summarist</h1>
+        <h1>Create an account</h1>
 
-        {/* Error */}
-        {error && (
-          <div className="login-error">
-            {error}
-          </div>
-        )}
+        {error && <div className="login-error">{error}</div>}
 
-        {/* Google Signup */}
         <button
           type="button"
-          className="login-google-button"
-          onClick={handleGoogleSignup}
+          className="google-login-button"
+          onClick={handleGoogleSignUp}
           disabled={loading}
         >
-          <span className="google-icon-wrapper">
-            <img
-              src={googleIcon}
-              alt="Google"
-            />
-          </span>
-
+          <img src={googleLogo} alt="Google" />
           <span>Sign up with Google</span>
         </button>
 
-        {/* Divider */}
         <div className="login-divider">
-          <span></span>
-          <p>or</p>
-          <span></span>
+          <span>or</span>
         </div>
 
-        {/* Email Signup */}
-        <form
-          onSubmit={handleRegister}
-          className="login-form"
-        >
+        <form onSubmit={handleRegister} className="login-form">
           <input
             type="email"
             placeholder="Email Address"
+            aria-label="Email Address"
             value={email}
-            onChange={(event) => setEmail(event.target.value)}
+            onChange={(event) => {
+              setEmail(event.target.value);
+              clearError();
+            }}
             required
           />
 
           <input
             type="password"
             placeholder="Password"
+            aria-label="Password"
             value={password}
-            onChange={(event) => setPassword(event.target.value)}
+            onChange={(event) => {
+              setPassword(event.target.value);
+              clearError();
+            }}
+            required
+          />
+
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            aria-label="Confirm Password"
+            value={confirmPassword}
+            onChange={(event) => {
+              setConfirmPassword(event.target.value);
+              clearError();
+            }}
             required
           />
 
@@ -190,17 +209,14 @@ const Register = () => {
             className="login-submit-button"
             disabled={loading}
           >
-            {loading ? "Signing up..." : "Sign up"}
+            {loading ? "Creating account..." : "Sign up"}
           </button>
         </form>
 
-        {/* Login */}
         <div className="login-register-section">
-          <Link to="/login">
-            Already have an account?
-          </Link>
+          <span>Already have an account?</span>
+          <Link to="/login">Login</Link>
         </div>
-
       </div>
     </main>
   );
