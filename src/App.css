@@ -3794,3 +3794,209 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================================
+   FINAL RESPONSIVE OVERRIDES
+   Keeps the existing design while improving tablet/mobile
+========================================================= */
+
+/* Prevent grid children from becoming narrower than their content. */
+.selected-book-card,
+.book-details-card,
+.book-details-skeleton,
+.knowledge-row,
+.summarist-hero {
+  min-width: 0;
+}
+
+.selected-book-card > *,
+.book-details-card > *,
+.book-details-skeleton > *,
+.knowledge-row > *,
+.summarist-hero > * {
+  min-width: 0;
+}
+
+/* TABLET: stack the selected book before the layout gets cramped. */
+@media (max-width: 800px) {
+  .selected-book-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 22px;
+  }
+
+  .selected-book-image {
+    width: 100%;
+  }
+
+  .selected-book-image img {
+    width: 190px;
+    height: 260px;
+    margin: 0 auto;
+  }
+
+  .selected-book-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .selected-book-content h3 {
+    font-size: 27px;
+  }
+
+  .book-subtitle,
+  .book-author,
+  .book-description {
+    max-width: 100%;
+  }
+
+  .books-grid,
+  .skeleton-books {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .for-you-page {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .book-details-card,
+  .book-details-skeleton {
+    grid-template-columns: 1fr;
+  }
+
+  .book-details-image {
+    max-width: 330px;
+    margin: 0 auto;
+  }
+}
+
+/* MOBILE: use one column and keep text comfortably readable. */
+@media (max-width: 600px) {
+  .selected-book-card {
+    padding: 18px;
+  }
+
+  .selected-book-image img {
+    width: 170px;
+    height: 235px;
+  }
+
+  .selected-book-content h3 {
+    font-size: 24px;
+  }
+
+  .book-subtitle,
+  .book-author,
+  .book-description {
+    font-size: 15px;
+  }
+
+  .books-grid,
+  .skeleton-books {
+    grid-template-columns: 1fr;
+  }
+
+  .book-card-image {
+    height: 260px;
+  }
+
+  .book-card-content {
+    min-height: auto;
+  }
+
+  .for-you-page {
+    width: calc(100% - 75px);
+    margin-left: 75px;
+    padding: 30px 18px;
+  }
+
+  .for-you-header h1 {
+    font-size: 28px;
+  }
+
+  .book-details-page,
+  .player-page {
+    padding: 30px 18px;
+  }
+
+  .book-details-card,
+  .book-details-skeleton {
+    padding: 20px;
+  }
+
+  .book-details-content h1 {
+    font-size: 30px;
+  }
+
+  .book-summary-section,
+  .book-tags-section,
+  .book-author-section {
+    padding: 25px 20px;
+  }
+
+  .audio-controls {
+    gap: 12px;
+  }
+
+  .audio-progress {
+    grid-template-columns: 42px 1fr 42px;
+    gap: 8px;
+  }
+
+  .payment-card {
+    padding: 25px 18px;
+  }
+}
+
+/* VERY SMALL SCREENS */
+@media (max-width: 420px) {
+  .selected-book-card {
+    padding: 15px;
+  }
+
+  .selected-book-image img {
+    width: 150px;
+    height: 210px;
+  }
+
+  .selected-book-content h3 {
+    font-size: 22px;
+  }
+
+  .book-description,
+  .book-subtitle,
+  .book-author {
+    font-size: 14px;
+  }
+
+  .for-you-page {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .book-card-image {
+    height: 230px;
+  }
+}
+.library-remove-button {
+  padding: 14px 20px;
+  border: 1px solid #e0e6e9;
+  border-radius: 6px;
+  background: #fff;
+  color: #d64545;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.library-remove-button:hover {
+  background: #fff4f4;
+  border-color: #d64545;
+}
+
+.library-button:disabled {
+  cursor: default;
+  opacity: 1;
+}

@@ -8,6 +8,7 @@ const BookDetails = () => {
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [isSaved, setIsSaved] = useState(false);
 
   useEffect(() => {
     const fetchBook = async () => {
@@ -26,6 +27,17 @@ const BookDetails = () => {
         const data = await response.json();
 
         setBook(data);
+
+        const library = JSON.parse(
+          localStorage.getItem("library") || "[]"
+        );
+
+        const alreadySaved = library.some(
+          (savedBook) =>
+            String(savedBook.id) === String(data.id)
+        );
+
+        setIsSaved(alreadySaved);
       } catch (err) {
         console.error(err);
         setError("Unable to load this book.");
@@ -51,6 +63,76 @@ const BookDetails = () => {
     }
 
     navigate(`/player/${book.id}`);
+  };
+
+  const handleAddToLibrary = () => {
+    const user = localStorage.getItem("user");
+
+    if (!user) {
+      navigate("/login");
+      return;
+    }
+
+    const library = JSON.parse(
+      localStorage.getItem("library") || "[]"
+    );
+
+    const alreadySaved = library.some(
+      (savedBook) =>
+        String(savedBook.id) === String(book.id)
+    );
+
+    if (alreadySaved) {
+      setIsSaved(true);
+      return;
+    }
+
+    const bookToSave = {
+      id: book.id,
+      title: book.title,
+      author: book.author,
+      subtitle: book.subTitle,
+      imageLink: book.imageLink,
+    };
+
+    const updatedLibrary = [...library, bookToSave];
+
+    localStorage.setItem(
+      "library",
+      JSON.stringify(updatedLibrary)
+    );
+
+    setIsSaved(true);
+
+    window.dispatchEvent(
+      new Event("libraryUpdated")
+    );
+
+    alert("Book added to My Library.");
+  };
+
+  const handleRemoveFromLibrary = () => {
+    const library = JSON.parse(
+      localStorage.getItem("library") || "[]"
+    );
+
+    const updatedLibrary = library.filter(
+      (savedBook) =>
+        String(savedBook.id) !== String(book.id)
+    );
+
+    localStorage.setItem(
+      "library",
+      JSON.stringify(updatedLibrary)
+    );
+
+    setIsSaved(false);
+
+    window.dispatchEvent(
+      new Event("libraryUpdated")
+    );
+
+    alert("Book removed from My Library.");
   };
 
   if (loading) {
@@ -80,9 +162,15 @@ const BookDetails = () => {
         <div className="book-details-container">
           <div className="error-message">
             <h2>Book Not Found</h2>
-            <p>{error || "We could not find this book."}</p>
 
-            <Link to="/for-you" className="book-details-back-button">
+            <p>
+              {error || "We could not find this book."}
+            </p>
+
+            <Link
+              to="/for-you"
+              className="book-details-back-button"
+            >
               Back to For You
             </Link>
           </div>
@@ -94,21 +182,31 @@ const BookDetails = () => {
   return (
     <main className="book-details-page">
       <div className="book-details-container">
-        <Link to="/for-you" className="book-details-back">
+        <Link
+          to="/for-you"
+          className="book-details-back"
+        >
           ← Back to For You
         </Link>
 
         <section className="book-details-card">
           <div className="book-details-image">
-            <img src={book.imageLink} alt={book.title} />
+            <img
+              src={book.imageLink}
+              alt={book.title}
+            />
 
             {book.subscriptionRequired && (
-              <span className="premium-pill">Premium</span>
+              <span className="premium-pill">
+                Premium
+              </span>
             )}
           </div>
 
           <div className="book-details-content">
-            <p className="book-details-label">BOOK SUMMARY</p>
+            <p className="book-details-label">
+              BOOK SUMMARY
+            </p>
 
             <h1>{book.title}</h1>
 
@@ -139,7 +237,9 @@ const BookDetails = () => {
                 type="button"
                 onClick={handleReadOrListen}
               >
-                {book.type === "audio" ? "Listen" : "Read"}
+                {book.type === "audio"
+                  ? "Listen"
+                  : "Read"}
               </button>
 
               {book.type === "audio & text" && (
@@ -152,22 +252,33 @@ const BookDetails = () => {
                 </button>
               )}
 
-              <button
-                type="button"
-                className="library-button"
-                onClick={() => {
-                  const user = localStorage.getItem("user");
+              {isSaved ? (
+                <>
+                  <button
+                    type="button"
+                    className="library-button"
+                    disabled
+                  >
+                    ✓ In My Library
+                  </button>
 
-                  if (!user) {
-                    navigate("/login");
-                    return;
-                  }
-
-                  alert("Book added to My Library.");
-                }}
-              >
-                + Add to My Library
-              </button>
+                  <button
+                    type="button"
+                    className="library-remove-button"
+                    onClick={handleRemoveFromLibrary}
+                  >
+                    Remove from My Library
+                  </button>
+                </>
+              ) : (
+                <button
+                  type="button"
+                  className="library-button"
+                  onClick={handleAddToLibrary}
+                >
+                  + Add to My Library
+                </button>
+              )}
             </div>
           </div>
         </section>
