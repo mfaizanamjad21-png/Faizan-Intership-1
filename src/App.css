@@ -4000,3 +4000,98 @@ img {
   cursor: default;
   opacity: 1;
 }
+
+/* =========================================================
+   BOOK LIST HORIZONTAL SCROLL
+   The book lists stay on one row and scroll horizontally.
+========================================================= */
+
+.books-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 12px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+.books-grid .book-card {
+  flex: 0 0 180px;
+  width: 180px;
+  min-width: 180px;
+}
+
+.skeleton-books {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+}
+
+.skeleton-books .book-skeleton {
+  flex: 0 0 180px;
+  width: 180px;
+  min-width: 180px;
+}
+
+/* Keep the horizontal book lists on one row at every screen size. */
+@media (max-width: 1200px) {
+  .books-grid,
+  .skeleton-books {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .books-grid .book-card,
+  .skeleton-books .book-skeleton {
+    flex: 0 0 180px;
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 700px) {
+  .books-grid,
+  .skeleton-books {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+  }
+
+  .books-grid .book-card,
+  .skeleton-books .book-skeleton {
+    flex: 0 0 175px;
+    width: 175px;
+    min-width: 175px;
+  }
+
+  .books-grid .book-card-image {
+    height: 190px;
+  }
+}
+
+@media (max-width: 480px) {
+  .books-grid,
+  .skeleton-books {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .books-grid .book-card,
+  .skeleton-books .book-skeleton {
+    flex: 0 0 165px;
+    width: 165px;
+    min-width: 165px;
+  }
+
+  .books-grid .book-card-image {
+    height: 210px;
+  }
+}
